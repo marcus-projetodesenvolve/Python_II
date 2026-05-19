@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module aventura_pkg.labirinto</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="aventura_pkg.html" class="white">aventura_pkg</a>.labirinto</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/home/user/output/aventura_no_labirinto/aventura_pkg/labirinto.py">/home/user/output/aventura_no_labirinto/aventura_pkg/labirinto.py</a></td></tr></table>
+    <p><span class="code">Módulo&nbsp;labirinto&nbsp;-&nbsp;geração&nbsp;e&nbsp;impressão&nbsp;do&nbsp;labirinto.<br>
+&nbsp;<br>
+Funções:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#-criar_labirinto">criar_labirinto</a>(largura,&nbsp;altura)&nbsp;&nbsp;-&gt;&nbsp;list[list[str]]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#-imprimir_labirinto">imprimir_labirinto</a>(lab,&nbsp;jog_pos)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#-gerar_itens">gerar_itens</a>(lab)</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="random.html">random</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-criar_labirinto"><strong>criar_labirinto</strong></a>(largura: int = 21, altura: int = 11) -&gt; list</dt><dd><span class="code">Gera&nbsp;um&nbsp;labirinto&nbsp;aleatório&nbsp;usando&nbsp;algoritmo&nbsp;de&nbsp;Recursive&nbsp;Backtracking.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;largura&nbsp;(int):&nbsp;Número&nbsp;de&nbsp;colunas&nbsp;(deve&nbsp;ser&nbsp;ímpar).&nbsp;Padrão&nbsp;21.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;altura&nbsp;&nbsp;(int):&nbsp;Número&nbsp;de&nbsp;linhas&nbsp;&nbsp;(deve&nbsp;ser&nbsp;ímpar).&nbsp;Padrão&nbsp;11.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list[list[str]]:&nbsp;Matriz&nbsp;2D&nbsp;representando&nbsp;o&nbsp;labirinto.</span></dd></dl>
+ <dl><dt><a name="-gerar_itens"><strong>gerar_itens</strong></a>(lab: list, quantidade: int = 3) -&gt; list</dt><dd><span class="code">Insere&nbsp;itens&nbsp;coletáveis&nbsp;(★)&nbsp;em&nbsp;posições&nbsp;aleatórias&nbsp;de&nbsp;caminho&nbsp;no&nbsp;labirinto.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lab&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(list):&nbsp;Matriz&nbsp;do&nbsp;labirinto.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;quantidade&nbsp;(int):&nbsp;Número&nbsp;de&nbsp;itens&nbsp;a&nbsp;inserir.&nbsp;Padrão&nbsp;3.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;Lista&nbsp;de&nbsp;posições&nbsp;(linha,&nbsp;coluna)&nbsp;dos&nbsp;itens&nbsp;inseridos.</span></dd></dl>
+ <dl><dt><a name="-imprimir_labirinto"><strong>imprimir_labirinto</strong></a>(lab: list, jog_pos: tuple, nome: str = 'Jogador', cor: str = 'green') -&gt; None</dt><dd><span class="code">Imprime&nbsp;o&nbsp;labirinto&nbsp;no&nbsp;terminal&nbsp;com&nbsp;Rich,&nbsp;destacando&nbsp;o&nbsp;jogador.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lab&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(list)&nbsp;:&nbsp;Matriz&nbsp;do&nbsp;labirinto.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;jog_pos&nbsp;(tuple):&nbsp;Posição&nbsp;atual&nbsp;(linha,&nbsp;col)&nbsp;do&nbsp;jogador.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;nome&nbsp;&nbsp;&nbsp;&nbsp;(str)&nbsp;&nbsp;:&nbsp;Nome&nbsp;do&nbsp;jogador&nbsp;(exibido&nbsp;como&nbsp;símbolo).<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(str)&nbsp;&nbsp;:&nbsp;Cor&nbsp;do&nbsp;jogador&nbsp;no&nbsp;terminal.</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>CAMINHO</strong> = ' '<br>
+<strong>ITEM</strong> = '★'<br>
+<strong>PAREDE</strong> = '█'<br>
+<strong>SAIDA</strong> = 'E'<br>
+<strong>console</strong> = &lt;console width=80 ColorSystem.STANDARD&gt;</td></tr></table>
+</body></html>

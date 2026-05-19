@@ -1,0 +1,6 @@
+ipython_pygments_lexers==1.1.1
+jupyterlab_pygments==0.3.0
+markdown-it-py==3.0.0
+Pygments==2.19.1
+pynput==1.8.2
+rich==14.0.0

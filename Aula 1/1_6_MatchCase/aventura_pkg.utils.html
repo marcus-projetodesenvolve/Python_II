@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module aventura_pkg.utils</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="aventura_pkg.html" class="white">aventura_pkg</a>.utils</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/home/user/output/aventura_no_labirinto/aventura_pkg/utils.py">/home/user/output/aventura_no_labirinto/aventura_pkg/utils.py</a></td></tr></table>
+    <p><span class="code">Módulo&nbsp;utils&nbsp;-&nbsp;utilitários&nbsp;de&nbsp;interface,&nbsp;animações&nbsp;e&nbsp;menus.<br>
+&nbsp;<br>
+Funções:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#-imprimir_instrucoes">imprimir_instrucoes</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#-imprimir_menu">imprimir_menu</a>(nome,&nbsp;cor)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt;&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#-tela_resultado">tela_resultado</a>(jogador,&nbsp;cor)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#-animacao_vitoria">animacao_vitoria</a>(nome,&nbsp;nivel,&nbsp;cor)&nbsp;&nbsp;&nbsp;&nbsp;[RECURSIVA]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#-imprimir_hud">imprimir_hud</a>(jogador)</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="time.html">time</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-animacao_vitoria"><strong>animacao_vitoria</strong></a>(nome: str, nivel: int, cor: str = 'green') -&gt; None</dt><dd><span class="code">Exibe&nbsp;uma&nbsp;animação&nbsp;recursiva&nbsp;de&nbsp;celebração&nbsp;de&nbsp;vitória.<br>
+&nbsp;<br>
+A&nbsp;cada&nbsp;nível&nbsp;imprime&nbsp;uma&nbsp;linha&nbsp;de&nbsp;estrelas&nbsp;crescente.<br>
+Caso&nbsp;base:&nbsp;nivel&nbsp;==&nbsp;0&nbsp;(para&nbsp;a&nbsp;recursão).<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;nome&nbsp;&nbsp;(str):&nbsp;Nome&nbsp;do&nbsp;jogador.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;nivel&nbsp;(int):&nbsp;Nível&nbsp;atual&nbsp;da&nbsp;animação&nbsp;(decrementado&nbsp;recursivamente).<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cor&nbsp;&nbsp;&nbsp;(str):&nbsp;Cor&nbsp;da&nbsp;animação.</span></dd></dl>
+ <dl><dt><a name="-imprimir_hud"><strong>imprimir_hud</strong></a>(jogador: dict, cor: str = 'green') -&gt; None</dt><dd><span class="code">Imprime&nbsp;a&nbsp;barra&nbsp;de&nbsp;informações&nbsp;do&nbsp;jogador&nbsp;(HUD)&nbsp;acima&nbsp;do&nbsp;labirinto.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;jogador&nbsp;(dict):&nbsp;Estado&nbsp;atual&nbsp;do&nbsp;jogador.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(str)&nbsp;:&nbsp;Cor&nbsp;do&nbsp;jogador.</span></dd></dl>
+ <dl><dt><a name="-imprimir_instrucoes"><strong>imprimir_instrucoes</strong></a>() -&gt; None</dt><dd><span class="code">Exibe&nbsp;as&nbsp;instruções&nbsp;do&nbsp;jogo&nbsp;formatadas&nbsp;com&nbsp;Rich.</span></dd></dl>
+ <dl><dt><a name="-imprimir_menu"><strong>imprimir_menu</strong></a>(nome: str = 'Jogador', cor: str = 'green') -&gt; str</dt><dd><span class="code">Exibe&nbsp;o&nbsp;menu&nbsp;principal&nbsp;e&nbsp;retorna&nbsp;a&nbsp;opção&nbsp;escolhida&nbsp;pelo&nbsp;usuário.<br>
+&nbsp;<br>
+Opções:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;-&nbsp;Jogar<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;-&nbsp;Instruções<br>
+&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;-&nbsp;Assistir&nbsp;solução&nbsp;automática<br>
+&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;-&nbsp;Sair<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;nome&nbsp;(str):&nbsp;Nome&nbsp;do&nbsp;jogador&nbsp;para&nbsp;personalizar&nbsp;o&nbsp;menu.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cor&nbsp;&nbsp;(str):&nbsp;Cor&nbsp;principal&nbsp;do&nbsp;jogador.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;str:&nbsp;Opção&nbsp;escolhida&nbsp;('1','2','3','4').</span></dd></dl>
+ <dl><dt><a name="-tela_resultado"><strong>tela_resultado</strong></a>(jogador: dict, cor: str = 'green') -&gt; None</dt><dd><span class="code">Exibe&nbsp;a&nbsp;tela&nbsp;de&nbsp;vitória&nbsp;ou&nbsp;derrota&nbsp;com&nbsp;estatísticas&nbsp;do&nbsp;jogador.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;jogador&nbsp;(dict):&nbsp;Estado&nbsp;final&nbsp;do&nbsp;jogador.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(str)&nbsp;:&nbsp;Cor&nbsp;do&nbsp;jogador.</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>INSTRUCOES</strong> = '<span class="repr">\n</span>[bold cyan]═══════════════ COMO JOGAR ═════════...════════════════════════════════════[/bold cyan]<span class="repr">\n</span>'<br>
+<strong>console</strong> = &lt;console width=80 ColorSystem.STANDARD&gt;</td></tr></table>
+</body></html>

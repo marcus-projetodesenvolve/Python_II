@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module aventura_pkg.jogador</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="aventura_pkg.html" class="white">aventura_pkg</a>.jogador</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/home/user/output/aventura_no_labirinto/aventura_pkg/jogador.py">/home/user/output/aventura_no_labirinto/aventura_pkg/jogador.py</a></td></tr></table>
+    <p><span class="code">Módulo&nbsp;jogador&nbsp;-&nbsp;controle&nbsp;de&nbsp;movimentação&nbsp;e&nbsp;pontuação.<br>
+&nbsp;<br>
+Funções:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#-iniciar_jogador">iniciar_jogador</a>(lab)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt;&nbsp;dict<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#-mover">mover</a>(jogador,&nbsp;lab,&nbsp;tecla)&nbsp;&nbsp;&nbsp;&nbsp;-&gt;&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#-pontuar">pontuar</a>(jogador,&nbsp;evento)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#-resolver_labirinto">resolver_labirinto</a>(lab,&nbsp;pos)&nbsp;&nbsp;-&gt;&nbsp;list&nbsp;&nbsp;[RECURSIVA]</span></p>
+<p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-iniciar_jogador"><strong>iniciar_jogador</strong></a>(lab: list, nome: str = 'Jogador') -&gt; dict</dt><dd><span class="code">Cria&nbsp;o&nbsp;dicionário&nbsp;de&nbsp;estado&nbsp;do&nbsp;jogador&nbsp;na&nbsp;posição&nbsp;inicial&nbsp;(1,1).<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lab&nbsp;&nbsp;(list):&nbsp;Matriz&nbsp;do&nbsp;labirinto.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;nome&nbsp;(str)&nbsp;:&nbsp;Nome&nbsp;do&nbsp;jogador.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dict:&nbsp;Estado&nbsp;do&nbsp;jogador&nbsp;com&nbsp;pos,&nbsp;pontuação,&nbsp;itens&nbsp;e&nbsp;movimentos.</span></dd></dl>
+ <dl><dt><a name="-mover"><strong>mover</strong></a>(jogador: dict, lab: list, tecla: str) -&gt; str</dt><dd><span class="code">Move&nbsp;o&nbsp;jogador&nbsp;no&nbsp;labirinto&nbsp;de&nbsp;acordo&nbsp;com&nbsp;a&nbsp;tecla&nbsp;pressionada.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;jogador&nbsp;(dict):&nbsp;Estado&nbsp;atual&nbsp;do&nbsp;jogador.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lab&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(list):&nbsp;Matriz&nbsp;do&nbsp;labirinto.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tecla&nbsp;&nbsp;&nbsp;(str)&nbsp;:&nbsp;Tecla&nbsp;pressionada&nbsp;('w','a','s','d').<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;str:&nbsp;Mensagem&nbsp;descrevendo&nbsp;o&nbsp;resultado&nbsp;do&nbsp;movimento.</span></dd></dl>
+ <dl><dt><a name="-pontuar"><strong>pontuar</strong></a>(jogador: dict, evento: str) -&gt; None</dt><dd><span class="code">Atualiza&nbsp;a&nbsp;pontuação&nbsp;do&nbsp;jogador&nbsp;conforme&nbsp;o&nbsp;evento&nbsp;ocorrido.<br>
+&nbsp;<br>
+Eventos:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'item'&nbsp;&nbsp;-&gt;&nbsp;+20&nbsp;pontos<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'saida'&nbsp;-&gt;&nbsp;+100&nbsp;pontos&nbsp;-&nbsp;(movimentos&nbsp;*&nbsp;2)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'passo'&nbsp;-&gt;&nbsp;-1&nbsp;ponto<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;jogador&nbsp;(dict):&nbsp;Estado&nbsp;do&nbsp;jogador.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;evento&nbsp;&nbsp;(str)&nbsp;:&nbsp;Tipo&nbsp;de&nbsp;evento.</span></dd></dl>
+ <dl><dt><a name="-resolver_labirinto"><strong>resolver_labirinto</strong></a>(lab: list, pos: tuple, visitados: set = None) -&gt; list</dt><dd><span class="code">Resolve&nbsp;o&nbsp;labirinto&nbsp;recursivamente&nbsp;a&nbsp;partir&nbsp;de&nbsp;uma&nbsp;posição.<br>
+&nbsp;<br>
+Percorre&nbsp;o&nbsp;labirinto&nbsp;usando&nbsp;DFS&nbsp;e&nbsp;retorna&nbsp;a&nbsp;lista&nbsp;de&nbsp;movimentos<br>
+('w','a','s','d')&nbsp;que&nbsp;levam&nbsp;da&nbsp;posição&nbsp;atual&nbsp;até&nbsp;a&nbsp;saída.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lab&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(list)&nbsp;:&nbsp;Matriz&nbsp;do&nbsp;labirinto.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(tuple):&nbsp;Posição&nbsp;atual&nbsp;(linha,&nbsp;col).<br>
+&nbsp;&nbsp;&nbsp;&nbsp;visitados(set)&nbsp;&nbsp;:&nbsp;Conjunto&nbsp;de&nbsp;posições&nbsp;já&nbsp;visitadas.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;Sequência&nbsp;de&nbsp;teclas&nbsp;para&nbsp;resolver&nbsp;o&nbsp;labirinto,&nbsp;ou&nbsp;[]&nbsp;se&nbsp;sem&nbsp;solução.</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>ITEM</strong> = '★'<br>
+<strong>PAREDE</strong> = '█'<br>
+<strong>SAIDA</strong> = 'E'<br>
+<strong>TECLAS</strong> = {'a': (0, -1), 'd': (0, 1), 's': (1, 0), 'w': (-1, 0)}<br>
+<strong>console</strong> = &lt;console width=80 ColorSystem.STANDARD&gt;</td></tr></table>
+</body></html>
