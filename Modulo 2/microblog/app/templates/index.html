@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+{% if user and user.is_authenticated %}
+    <div style="background: #eef2f7; padding: 15px; border-radius: 6px; margin-bottom: 25px; display: flex; align-items: center; gap: 15px;">
+        {% if user.avatar_url %}<img src="{{ user.avatar_url }}" alt="Foto" class="avatar">
+        {% else %}<div class="avatar" style="line-height:50px; text-align:center; background:#7f8c8d; color:white;">{{ user.username[0].upper() }}</div>{% endif %}
+        <div><h3 style="margin: 0;">Olá, {{ user.username }}!</h3><p style="margin: 5px 0 0 0; color: #555;">{{ user.bio or '' }}</p></div>
+    </div>
+{% endif %}
+<h2>Feed</h2>
+{% if posts %}{% for post in posts %}
+        <div class="post-card">
+            {% if post.author.avatar_url %}<img src="{{ post.author.avatar_url }}" class="avatar">
+            {% else %}<div class="avatar" style="line-height:50px; text-align:center; background:#95a5a6; color:white;">{{ post.author.username[0].upper() }}</div>{% endif %}
+            <div style="flex-grow: 1;">
+                <div><strong>@{{ post.author.username }}</strong> <span style="font-size: 12px; color: #999;">{{ post.timestamp.strftime('%d/%m/%Y %H:%M') }}</span></div>
+                <div style="margin-top:5px;">{{ post.body }}</div>
+            </div>
+        </div>
+    {% endfor %}
+{% else %}<p>Nenhum post.</p>{% endif %}
+{% endblock %}
