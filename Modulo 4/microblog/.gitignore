@@ -1,5 +1,3 @@
-flask_env/
-instance/
 # Ignorar ambiente virtual do Python
 venv/
 .venv/
